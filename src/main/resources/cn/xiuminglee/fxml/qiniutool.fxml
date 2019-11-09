@@ -7,11 +7,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.image.Image?>
-<VBox id="VBox" prefHeight="800" prefWidth="800" spacing="20" alignment="TOP_CENTER"
+<VBox id="VBox" prefHeight="500" prefWidth="500" spacing="20" alignment="TOP_CENTER"
       xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="cn.xiuminglee.controller.QiniuToolController">
     <children>
-        <ImageView fx:id="imageView"  fitHeight="600.0" fitWidth="800" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imageView"  fitHeight="300.0" fitWidth="500" pickOnBounds="true" preserveRatio="true" />
         <TextField fx:id="textField" prefHeight="50" layoutX="126" layoutY="120" text="图片地址"/>
         <Button fx:id="delButton" alignment="CENTER" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="删除"/>
     </children>

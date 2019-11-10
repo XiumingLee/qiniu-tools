@@ -26,7 +26,6 @@ public class QiniuUtil {
     private static final String BUCKET_NAME = PropertiesUtil.getProperty("bucket-name");
 
     private static Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
-    private static String upToken = auth.uploadToken(BUCKET_NAME);
     private static Configuration cfg = new Configuration(Region.region1());
     private static UploadManager uploadManager = new UploadManager(cfg);
 
@@ -37,6 +36,7 @@ public class QiniuUtil {
      * @return
      */
     public static String upload(byte[] bytes, String extName)  {
+        String upToken = auth.uploadToken(BUCKET_NAME);
         String fileName = System.currentTimeMillis() + (int)(Math.random() * 100) + "." + extName;
         Response response = null;
         DefaultPutRet putRet = null;

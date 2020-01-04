@@ -1,6 +1,7 @@
 package cn.xiuminglee.util;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -16,11 +17,12 @@ public class PropertiesUtil {
     private static Properties props;
 
     static {
-        String fileName = System.getProperty("user.dir") + File.separator + "conf.properties";
+        String fileName = "conf.properties";
         props = new Properties();
         try {
-            InputStream inputStream = new FileInputStream(fileName);
-            props.load(new InputStreamReader(inputStream,"UTF-8"));
+            InputStream inputStream = ClassLoader.getSystemResourceAsStream(fileName);
+            assert inputStream != null;
+            props.load(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
         } catch (IOException e) {
             log.warning("配置文件读取异常" + e.getMessage());
         }

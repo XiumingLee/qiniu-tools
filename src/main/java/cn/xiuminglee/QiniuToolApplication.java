@@ -15,9 +15,6 @@ import javafx.stage.Stage;
  * @Describe:
  */
 public class QiniuToolApplication extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("七牛云工具");

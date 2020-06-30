@@ -1,4 +1,7 @@
 # qiniu-tools
+## 最新版已经移植到[**`MingTools`**](https://github.com/XiumingLee/MingTools)项目中。
+
+## 此仓库不再维护。
 
 > 喜欢的麻烦给个Star，你的Star就是对我开源的最大支持和动力。谢谢！！
 
